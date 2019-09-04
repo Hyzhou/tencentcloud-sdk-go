@@ -15,9 +15,9 @@
 package v20180317
 
 import (
-    "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"
-    tchttp "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/http"
-    "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile"
+    "github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/common"
+    tchttp "github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/common/http"
+    "github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/common/profile"
 )
 
 const APIVersion = "2018-03-17"
@@ -374,6 +374,54 @@ func (c *Client) DescribeClassicalLBHealthStatus(request *DescribeClassicalLBHea
         request = NewDescribeClassicalLBHealthStatusRequest()
     }
     response = NewDescribeClassicalLBHealthStatusResponse()
+    err = c.Send(request, response)
+    return
+}
+
+func NewBatchDeregisterTargetsRequest() (request *BatchDeregisterTargetsRequest) {
+    request = &BatchDeregisterTargetsRequest{
+        BaseRequest: &tchttp.BaseRequest{},
+    }
+    request.Init().WithApiInfo("clb", APIVersion, "BatchDeregisterTargets")
+    return
+}
+
+func NewBatchDeregisterTargetsResponse() (response *BatchDeregisterTargetsResponse) {
+    response = &BatchDeregisterTargetsResponse{
+        BaseResponse: &tchttp.BaseResponse{},
+    }
+    return
+}
+
+func (c *Client) BatchDeregisterTargets(request *BatchDeregisterTargetsRequest) (response *BatchDeregisterTargetsResponse, err error) {
+    if request == nil {
+        request = NewBatchDeregisterTargetsRequest()
+    }
+    response = NewBatchDeregisterTargetsResponse()
+    err = c.Send(request, response)
+    return
+}
+
+func NewBatchRegisterTargetsRequest() (request *BatchRegisterTargetsRequest) {
+    request = &BatchRegisterTargetsRequest{
+        BaseRequest: &tchttp.BaseRequest{},
+    }
+    request.Init().WithApiInfo("clb", APIVersion, "BatchRegisterTargets")
+    return
+}
+
+func NewBatchRegisterTargetsResponse() (response *BatchRegisterTargetsResponse) {
+    response = &BatchRegisterTargetsResponse{
+        BaseResponse: &tchttp.BaseResponse{},
+    }
+    return
+}
+
+func (c *Client) BatchRegisterTargets(request *BatchRegisterTargetsRequest) (response *BatchRegisterTargetsResponse, err error) {
+    if request == nil {
+        request = NewBatchRegisterTargetsRequest()
+    }
+    response = NewBatchRegisterTargetsResponse()
     err = c.Send(request, response)
     return
 }
