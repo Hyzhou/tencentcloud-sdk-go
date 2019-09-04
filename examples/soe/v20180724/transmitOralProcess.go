@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"
-	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile"
+	"github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/common"
+	"github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/common/profile"
 	"fmt"
-	soe "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/soe/v20180724"
-	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/errors"
+	soe "github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/soe/v20180724"
+	"github.com/Hyzhou/tencentcloud-sdk-go/tencentcloud/common/errors"
 	"encoding/json"
 )
 
